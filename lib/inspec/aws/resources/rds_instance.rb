@@ -10,7 +10,7 @@ class RdsInstance < TaggableRDSBase
   "
 
   def get_rds_resource(id:)
-    @rds_resource.instance(id)
+    @rds_resource.db_instance(id)
   end
 
   # def security_groups
@@ -26,6 +26,6 @@ class RdsInstance < TaggableRDSBase
   # end
 
   def to_s
-    "Instance #{@resource.id}"
+    "DBInstance #{@resource.id}"
   end
 end
