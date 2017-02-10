@@ -1,6 +1,6 @@
 # author: Kevin Formsma
 
-class RdsInstance < TaggableRDSBase
+class DBInstance < TaggableRDSBase
   name 'aws_rds_instance'
   desc 'Use the aws-rds-instance resource to test AWS EC2 Instances.'
   example "
