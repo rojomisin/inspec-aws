@@ -12,7 +12,7 @@ class RDSBase < Inspec.resource(1)
     begin
       @resource.load
     rescue Aws::RDS::Errors::ServiceError => error
-      skip_resource error
+      # skip_resource error
     end
   end
 
