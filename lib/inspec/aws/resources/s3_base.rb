@@ -8,7 +8,7 @@ class S3Base < Inspec.resource(1)
     else
       @s3_resource = s3_resource
     end
-    @resource = get_s3_resource(bucket_name: id) unless id.nil?
+    @resource = get_s3_resource(id: id) unless id.nil?
     @resource = resource unless resource.nil?
     begin
       @resource.load
@@ -27,7 +27,7 @@ class S3Base < Inspec.resource(1)
 
   private
 
-  def get_s3_resource(bucket_name:)
+  def get_s3_resource(id:)
     fail NotImplementedError, 'S3 inspec resource must implement #get_s3_resource'
   end
 end
