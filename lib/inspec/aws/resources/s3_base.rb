@@ -3,7 +3,6 @@
 class S3Base < Inspec.resource(1)
   def initialize(bucket_name: nil, resource: nil, s3_resource: nil)
     if s3_resource.nil?
-      # @rds_resource = Aws::RDS::Resource.new
       @s3_resource = Aws::S3::BucketTagging.new(bucket_name: bucket_name)
     else
       @s3_resource = s3_resource

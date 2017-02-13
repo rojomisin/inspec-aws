@@ -1,5 +1,7 @@
 # author: Kevin Formsma
-
+# NoMethodError: undefined method `s3_bucket' for #<Aws::S3::BucketTagging bucket_name="buckethalffull">
+#   /Users/rmicone/.gem/ruby/2.2.5/bundler/gems/inspec-aws-18941e3f6ecf/lib/inspec/aws/resources/s3_bucket.rb:13:in `get_s3_resource'
+#   /Users/rmicone/.gem/ruby/2.2.5/bundler/gems/inspec-aws-18941e3f6ecf/lib/inspec/aws/resources/s3_base.rb:11:in `initialize'
 class S3Bucket < TaggableS3Base
   name 'aws_s3_bucket'
   desc 'Use the aws-s3-bucket resource to test AWS EC2 Instances.'
@@ -10,7 +12,7 @@ class S3Bucket < TaggableS3Base
   "
 
   def get_s3_resource(bucket_name:)
-    @s3_resource.s3_bucket(bucket_name)
+    @s3_resource(bucket_name)
   end
 
   # def security_groups
