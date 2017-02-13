@@ -12,6 +12,7 @@ class S3Bucket < TaggableS3Base
   "
 
   def get_s3_resource(bucket_name:)
+    binding.pry
     @s3_resource(bucket_name)
   end
 
