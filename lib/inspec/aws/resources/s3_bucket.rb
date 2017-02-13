@@ -10,7 +10,7 @@ class S3Bucket < TaggableS3Base
   "
 
   def get_s3_resource(bucket_name:)
-    @s3_resource.s3_bucket(id)
+    @s3_resource.s3_bucket(bucket_name)
   end
 
   # def security_groups
@@ -26,6 +26,6 @@ class S3Bucket < TaggableS3Base
   # end
 
   def to_s
-    "S3Bucket #{@resource.id}"
+    "S3Bucket #{@resource.bucket_name}"
   end
 end
