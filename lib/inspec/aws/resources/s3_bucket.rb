@@ -13,7 +13,7 @@ class S3Bucket < TaggableS3Base
 
   def get_s3_resource()
     # binding.pry
-    @s3_resource.binding.pry
+    @s3_resource
   end
 
   # def security_groups
