@@ -29,6 +29,6 @@ class S3Bucket < TaggableS3Base
   # end
 
   def to_s
-    "S3Bucket #{@resource.bucket_name}"
+    "S3Bucket #{@resource}"
   end
 end
