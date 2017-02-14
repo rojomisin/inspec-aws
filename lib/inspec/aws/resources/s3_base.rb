@@ -11,7 +11,8 @@ class S3Base < Inspec.resource(1)
     @resource = get_s3_resource() unless bucket_name.nil?
     @resource = resource # unless resource.nil
     begin
-      @resource.load
+      # @resource.load
+      @resource
     rescue Aws::S3::Errors::ServiceError => error
       # skip_resource error
     end
